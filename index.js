@@ -7,14 +7,29 @@ class Animal {
     
 }
 
-const Dog = Animal
-const Gato = Animal
+class Dog extends Animal {
+    constructor(dono,Race) {
+        super("cachorro",dono,Race)
+    }
+}
+class Cat extends Animal{
+    constructor(dono,Race) {
+        super("Cat",dono,Race)
+    }
+}
+class Bird extends Animal {
+    constructor(dono,Race) {
+        super("bird",dono,Race);
+    }
+}
 
-const CachorroDoPaulo = new Dog("Cachorro","Paulo","Pastor Alemao");
-const CachorroDoJohn = new Dog("Cachorro","John","Labrador");
-const GatoDoPaulo2 = new Gato("Gato","Paulo","Preto");
+const CachorroDoPaulo = new Dog("Paulo","Pastor Alemao");
+const CachorroDoJohn = new Dog("John","Labrador");
+const GatoDoPaulo2 = new Cat("Paulo","Preto");
+const PassaroDoJohn = new Bird("John", "papagaio")
 
 
 console.log(CachorroDoPaulo);
 console.log(CachorroDoJohn);
 console.log(GatoDoPaulo2);
+console.log(PassaroDoJohn)
